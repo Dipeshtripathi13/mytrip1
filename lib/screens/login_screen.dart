@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:project_1/auth/google_sign_in.dart';
+import 'package:project_1/screens/home_screen1.dart';
 import 'package:project_1/screens/signup_screen.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:provider/provider.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -16,6 +19,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
         backgroundColor: const Color(0xFF1D1E33),
         appBar: AppBar(
@@ -106,7 +110,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: SignInButton(
                   Buttons.Google,
                   text: "Sign In with Google",
-                  onPressed: () {
+                  onPressed: () async{
+
+                    final provider = 
+                    Provider.of<GoogleSignInProvider>(context,listen: false);
+                    provider.googleLogin(
+                      
+                    );
+                    Navigator.pop(context, 'Sign In with Google');
                     //todo sign in with google
                   },
                   
@@ -119,4 +130,5 @@ class _LoginScreenState extends State<LoginScreen> {
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => const SignupScreen()));
   }
+  
 }

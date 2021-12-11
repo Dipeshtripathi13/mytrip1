@@ -1,10 +1,17 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:project_1/screens/home_screen1.dart';
+import 'package:project_1/screens/homepage.dart';
 import 'package:project_1/screens/login_screen.dart';
 import 'package:project_1/screens/signup_screen.dart';
 import 'package:project_1/screens/welcome_screen.dart';
+import 'package:provider/provider.dart';
 
-void main() {
+import 'auth/google_sign_in.dart';
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyTrip());
   
 }
@@ -14,22 +21,14 @@ class MyTrip extends StatelessWidget {
   
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
+  Widget build(BuildContext context) => ChangeNotifierProvider(
+    create: (context) => GoogleSignInProvider(),
 
-        textTheme: const TextTheme(
-          bodyText1: TextStyle(color: Colors.white),
-        ),
-      ),
-      initialRoute: WelcomeScreen.id,
-      routes: {
-        WelcomeScreen.id: (context) => const WelcomeScreen(),
-        LoginScreen.id: (context) => const LoginScreen(),
-        SignupScreen.id: (context) => const SignupScreen(),
-        HomeScreen.id: (context) => const HomeScreen(),
-      },
-    );
-  }
+    child: MaterialApp(
+      debugShowCheckedModeBanner: false,
+     
+      theme: ThemeData.dark().copyWith(colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.indigo)),
+      home: const HomePage(),
+    ),
+  );
 }

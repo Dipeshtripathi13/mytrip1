@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "159445585625",
+    "project_id": "mytrip1-f1310",
+    "storage_bucket": "mytrip1-f1310.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159445585625:android:7ddf6f04f3e720ad23f8c8",
+        "android_client_info": {
+          "package_name": "com.example.project_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159445585625-65ctjtct99ih0174u27urr0oru56eq5h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.project_1",
+            "certificate_hash": "bf211cde6f0cdcddb541cf782ab691ed8abf758f"
+          }
+        },
+        {
+          "client_id": "159445585625-bu68mhbmsam008511jt33jf9logtht88.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKWrk6wvlepFw9rPbk0uVUH_OXmg3Wk8U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "159445585625-bu68mhbmsam008511jt33jf9logtht88.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
