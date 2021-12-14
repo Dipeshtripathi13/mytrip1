@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({ Key? key }) : super(key: key);
-  static const String id = 'signup_screen';
+  //static const String id = 'signup_screen';
 
   @override
   _SignupScreenState createState() => _SignupScreenState();

@@ -16,6 +16,7 @@ class GoogleSignInProvider extends ChangeNotifier {
      final googleUser = await googleSignIn.signIn();
      if (googleUser == null) return;
      _user = googleUser;
+     
 
      final googleAuth = await googleUser.authentication;
 
@@ -32,6 +33,7 @@ class GoogleSignInProvider extends ChangeNotifier {
        print(e.toString());
      }
      notifyListeners();
+     
    }
 
    Future logout() async {
