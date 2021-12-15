@@ -1,5 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.project_1">
+
+    
   <queries>
   <!-- If your app opens https URLs -->
   <intent>
@@ -22,9 +24,16 @@
     <data android:mimeType="*/*" />
   </intent>
 </queries>
+
+   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+   <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
    <application
         android:label="project_1"
         android:icon="@mipmap/ic_launcher">
+
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDRHyBB43vk8tDGWJUq2Ajajp_-wJQ3kT4" />
+        
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

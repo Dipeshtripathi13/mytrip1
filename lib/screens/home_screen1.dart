@@ -2,6 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:project_1/auth/google_sign_in.dart';
 import 'package:project_1/inside_home_screens/about_us.dart';
+import 'package:project_1/inside_home_screens/homework/ahome.dart';
+import 'package:project_1/inside_home_screens/mapwork/location.dart';
+import 'package:project_1/inside_home_screens/mapwork/map.dart';
 
 import 'package:project_1/screens/profile_screen.dart';
 import 'package:provider/provider.dart';
@@ -20,22 +23,22 @@ class _HomeScreenState extends State<HomeScreen> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
    // ignore: prefer_final_fields
    List<Widget> _widgetOptions = <Widget>[
-    // const MainHome(),
-      const Text(
-       'Index 0: Home',
-       style: optionStyle,
-     ),
-      const Text(
-       'Index 1: Map',
-       style: optionStyle,
-     ),
-    //const CurrentWeatherPage(),
-   const Text(
-     'Index 2: ToDo DataFromAPI Here',
-      style: optionStyle,
+     AHome(),
+      //const Text(
+       //'Index 0: Home',
+      // style: optionStyle,
+    // ),
+     // const Text(
+      // 'Index 1: Map',
+       //style: optionStyle,
+     //),
+    MapPage(),
+  // const Text(
+   //  'Index 2: ToDo DataFromAPI Here',
+  //    style: optionStyle,
       
-    ),
-
+    //),
+DashboardScreen(),
     //const DataFromAPI(),//temporyly paused
 
     // const Text(
@@ -56,39 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final user = FirebaseAuth.instance.currentUser!;
      
     return Scaffold(
-      appBar: AppBar(
-        title:const Text('Logged In'),
-      actions: <Widget>[
-        MyStatelessWidget()
-      ]
-        
-      ),
-       drawer: Drawer(
-        child: ListView(children:  [
-           DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.purple,
-            ),
-            child: Text('OPTIONS'),
-            
-            
-          )
-        ,
-        ListTile(
-          title: Text("profile"),
-          onTap: () {
-             Navigator.push(
-        context, MaterialPageRoute(builder: (context) => const ProfileScreen()));
-
-      
-
-          },
-        ),
-         ListTile(
-          title: const Text("settings"),
-        )
-        ],),
-      ),
+     
            body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
 

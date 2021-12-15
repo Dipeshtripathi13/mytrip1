@@ -95,7 +95,10 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                       color: Colors.white,
                      // size: 30,
                    
-                    onPressed: () {},
+                    onPressed: () {
+
+                      //implement twiter account here
+                    },
                   ),
                 ])
               ],
