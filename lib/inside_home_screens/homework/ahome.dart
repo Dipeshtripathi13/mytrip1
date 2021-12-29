@@ -171,13 +171,17 @@ class _AHomeState extends State<AHome> {
                 children: [
                   Center(
                     child: Container(
-                      color: Colors.red,
-                      child: Text(
-                        basenameWithoutExtension(file.name),
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                            fontSize: 20),
+                      width: 200,
+                      color: Colors.black.withOpacity(0.6),
+                      
+                      child: Center(
+                        child: Text(
+                          basenameWithoutExtension(file.name),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 20),
+                        ),
                       ),
                     ),
                   ),
@@ -231,13 +235,16 @@ class _AHomeState extends State<AHome> {
                 children: [
                   Center(
                     child: Container(
-                      color: Colors.red,
-                      child: Text(
-                        basenameWithoutExtension(hotel.name),
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                            fontSize: 20),
+                      width: 200,
+                      color: Colors.black.withOpacity(0.6),
+                      child: Center(
+                        child: Text(
+                          basenameWithoutExtension(hotel.name),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 20),
+                        ),
                       ),
                     ),
                   ),

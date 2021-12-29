@@ -6,7 +6,6 @@ import 'package:project_1/inside_home_screens/homework/ahome.dart';
 import 'package:project_1/inside_home_screens/mapwork/location.dart';
 import 'package:project_1/inside_home_screens/mapwork/map.dart';
 
-import 'package:project_1/screens/profile_screen.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
