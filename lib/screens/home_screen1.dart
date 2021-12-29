@@ -12,6 +12,7 @@ import 'package:provider/provider.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({ Key? key }) : super(key: key);
  // static const String id = 'home_screen';
+ static final String title = 'Firebase Download';
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
